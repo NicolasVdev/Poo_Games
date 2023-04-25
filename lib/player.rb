@@ -11,7 +11,7 @@ class Player
   end
 
   def show_state
-  return "#{name} à #{life_points} points de vie"
+  puts "#{name} à #{life_points} points de vie"
   end
   
   def gets_damage(damage)
@@ -47,7 +47,7 @@ class HumanPlayer < Player
   end
 
   def show_state
-    return "#{name} à #{life_points} points de vie et une arme de niveau #{weapon_level}"
+    puts "#{name} à #{life_points} points de vie et une arme de niveau #{weapon_level}"
     end
 
   def compute_damage

@@ -47,7 +47,7 @@ player1 = HumanPlayer.new("#{psedo}")
 
 bot1 = Player.new("Josiane")
 bot2 = Player.new("José")
-ennemies = [bot1, bot2]
+enemies = [bot1, bot2]
 puts ""
 puts "Statistiques actuelles de notre héros du jour :"
 print "> "
@@ -102,7 +102,7 @@ while player1.life_points > 0 && (bot1.life_points > 0 || bot2.life_points > 0)
   puts "-----------------------------------------------------------\n\n"
   sleep (0.5)
   puts "Au tour des noobs !"
-  ennemies.each do |bot|
+  enemies.each do |bot|
     if bot.life_points > 0
       bot.attacks(player1)
       sleep (0.5)
