@@ -83,9 +83,13 @@ while player1.life_points > 0 && (bot1.life_points > 0 || bot2.life_points > 0)
       elsif choice == "2"
         player1.search_health_pack
       elsif choice == "3"
-        puts "Excellent choix !"
-        puts "Veux tu soulever #{bot1.show_state} ? ou scope #{bot2.show_state} ?"
-        puts "Press 1 pour #{bot1.name} ou 2 pour #{bot2.name}"
+        puts ""
+        puts "Excellent choix !\n\n"
+        # puts "#{bot1.show_state}"
+        # puts "veux tu la/le soulever ?\n\n" 
+        # # puts "#{bot2.show_state}"
+        # puts "ou scope #{bot2.show_state}\n\n"
+        puts "Press 1 pour soulever #{bot1.name} ou 2 pour scope #{bot2.name}"
           input = gets.chomp
           if input == "1"
             player1.attacks(bot1) 
@@ -118,4 +122,4 @@ else
   puts "YOU... LOSE !     #CHEH"
 end
 
-binding.pry
+# binding.pry

@@ -42,9 +42,9 @@ end
 puts ""
 puts "DING DING DING ! FIN DU COMBAT"
 puts ""
-puts "Voici l'état des joueurs après ce magnifique combat"
-puts "#{player1.show_state}"
-puts "et #{player2.show_state}"
+# puts "Voici l'état des joueurs après ce magnifique combat"
+# puts "#{player1.show_state}"
+# puts "et #{player2.show_state}"
 
 
-binding.pry
+# binding.pry
