@@ -11,13 +11,13 @@ class Player
   end
 
   def show_state
-  puts "#{name} à #{life_points} points de vie"
+  puts "#{name} à #{life_points} points de vie ❤️"
   end
   
   def gets_damage(damage)
     @life_points -= damage.to_i
     if @life_points <= 0
-      puts "le joueur #{name} tombe au sol !"  
+      puts "le joueur #{name} tombe au sol 💀😭 !"  
     end
   end
 
@@ -28,7 +28,7 @@ class Player
 
   def attacks(player)
     dice = compute_damage
-    write_blink("#{name} attaque #{player.name} et inflige #{dice} points de dommages", 0.2, 4)
+    write_blink("#{name} attaque 🤜 #{player.name} et inflige #{dice} points de dommages", 0.2, 4)
     player.gets_damage(dice)
   end
 
@@ -47,7 +47,7 @@ class HumanPlayer < Player
   end
 
   def show_state
-    puts "#{name} à #{life_points} points de vie et une arme de niveau #{weapon_level}"
+    puts "#{name} à #{life_points} points de vie ❤️   et une arme ⚔️   de niveau #{weapon_level}"
     end
 
   def compute_damage
@@ -56,7 +56,7 @@ class HumanPlayer < Player
 
   def search_weapon
     dice = compute_damage
-    puts "Tu as trouvé une arme de niveau #{dice}"
+    puts "⚔️   Tu as trouvé une arme de niveau #{dice} ⚔️"
     if dice > @weapon_level
       then @weapon_level = dice
       puts "Elle est meilleure (BROKEN) : tu la saisis !"
@@ -70,14 +70,14 @@ class HumanPlayer < Player
     if dice == 1
       puts "HAHA ! try again noob"
     elsif dice > 1 && dice < 6
-      puts "Allez hop, +50 HP"
+      puts "Allez hop, +50 HP ❤️"
       if @life_points + 50 > 100
         @life_points = 100
       else
         @life_points += 50
       end
     else
-      puts "JUNGLE DIFF! tu reprends +80 HP"
+      puts "JUNGLE DIFF! tu reprends +80 HP ❤️❤️"
       if @life_points + 80 > 100
         @life_points = 100
       else
